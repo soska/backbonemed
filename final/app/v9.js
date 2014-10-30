@@ -58,7 +58,7 @@ App.ListItemView = Backbone.View.extend({
   },
 
   render : function(){
-    this.$el.html('<input type="checkbox" class="checkbox"><span>' + this.model.get('title') + '</span><a href="#" class="delete">delete</a>');
+    this.$el.html('<input type="checkbox" class="checkbox"><span>' + this.model.get('title') + '</span> <a href="#" class="delete">&times;</a>');
     this.$checkbox = this.$el.find('input[type=checkbox]');
     if (this.model.get('done')){
       this.$el.addClass('done');
