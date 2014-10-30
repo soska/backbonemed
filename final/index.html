@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To do</title>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+	<script src="bower_components/backbone/backbone.js"></script>
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+  <style>
+
+    .wrapper{
+      max-width:600px;
+      padding:20px;
+      margin:0 auto;
+    }
+
+    #todo-list{
+      margin:0;
+      padding:0;
+    }
+
+      #todo-list li{
+        padding:0;
+        margin:0;
+        display:block;
+      }
+
+      #todo-list li input{
+        margin-right:20px;
+      }
+
+
+      #todo-list li.done{
+        color:#999;
+        text-decoration: line-through;
+      }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2><span id="todo-counter"></span> Cosas qué hacer</h2>
+    <div class="new-todo">
+      <form action="/new" id="todo-form">
+        <input type="text" placeholder="Escribe un quehacer" id="todo-field">
+      </form>
+    </div>
+    <ul id="todo-list"></ul>
+  </div>
+	<script src='app/v1.js'></script>
+</body>
+</html>
